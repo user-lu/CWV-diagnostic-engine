@@ -224,6 +224,8 @@ export async function fetchDiagnostics(
     key: apiKey,
     strategy, // 'mobile' | 'desktop', already validated by the action
     category: 'performance',
+    // Optional runPagespeed query param. Pins formatted audit strings to English.
+    locale: 'en-US',
   });
 
   const res = await fetch(`${PSI_ENDPOINT}?${params}`, {

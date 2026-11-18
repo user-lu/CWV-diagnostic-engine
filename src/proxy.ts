@@ -23,12 +23,12 @@ export function proxy(request: NextRequest): NextResponse {
   const { allowed, retryAfterSeconds } = limiter.check(getClientIp(request.headers));
   if (allowed) return NextResponse.next();
 
+  // Next 16.3.8's server-action-reducer.js uses this body as the thrown Error message
+  // only when status >= 400 and Content-Type is exactly `text/plain`. Any other type
+  // becomes "An unexpected response was received from the server."
   return new NextResponse(buildRateLimitBody(retryAfterSeconds), {
     status: 429,
     headers: {
-      // Must be EXACTLY 'text/plain'. A bare string body would default to
-      // 'text/plain;charset=UTF-8', and Next's client would then ignore our body and throw
-      // its generic "unexpected response" error instead.
       'Content-Type': 'text/plain',
       'Retry-After': String(retryAfterSeconds), // standard header, useful for non-browser clients
       'Cache-Control': 'no-store',
