@@ -1,5 +1,5 @@
 {
-  "name": "cwv-diagnostic-engine",
+  "name": "core-web-vitals-engine",
   "version": "0.1.0",
   "private": true,
   "scripts": {

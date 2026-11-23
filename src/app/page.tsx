@@ -1,4 +1,4 @@
-import { DiagnosticForm } from './_components/diagnostic-form';
+import { DiagnosticForm } from "./_components/diagnostic-form";
 
 // Server Component shell. The single Server Action runs the PageSpeed audit and the crawl in
 // parallel, so this ceiling must exceed the slower one: the 55s PSI abort in lib/pagespeed.ts
@@ -14,19 +14,25 @@ export default function Home() {
             aria-hidden="true"
             className="flex size-8 items-center justify-center rounded-lg bg-slate-900 text-sm font-bold text-white"
           >
-            H
+            CWV
           </div>
-          <span className="text-sm font-semibold tracking-tight">Technical Health</span>
-          <span className="ml-auto text-xs text-slate-500">Performance &amp; page structure</span>
+          <span className="text-sm font-semibold tracking-tight">
+            CWV Engine
+          </span>
+          <span className="ml-auto text-xs text-slate-500">
+            Performance &amp; Page structure
+          </span>
         </div>
       </header>
 
       <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold tracking-tight">Technical Health Diagnostic</h1>
+          <h1 className="text-2xl font-semibold tracking-tight">
+            Core Web Vitals Engine
+          </h1>
           <p className="mt-1 text-sm text-slate-600">
-            Core Web Vitals from PageSpeed Insights, plus the page&apos;s title, headings, images and
-            structured data read straight from its HTML.
+            Core Web Vitals from PageSpeed Insights, plus the page&apos;s title,
+            headings, images and structured data read straight from its HTML.
           </p>
         </div>
 
@@ -36,4 +42,4 @@ export default function Home() {
   );
 }
 
-// LEARNING NOTES: 
+// LEARNING NOTES:

@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Core Web Vitals Engine",
-  description: "Core Web Vitals tool that helps you improve your website's performance.",
+  description:
+    "Check any public URL's Core Web Vitals (lab and field LCP, CLS, INP), see the element behind its LCP, and get optional HTML fixes.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
